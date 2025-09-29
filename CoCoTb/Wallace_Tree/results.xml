@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1759120343" />
+    <testcase name="basic_addition_test" classname="test_wallace_tree" file="/home/vsysuser/workspace/CoCoTb/TEST/WTx/test_wallace_tree.py" lineno="6" time="0.0043299198150634766" sim_time_ns="1.0" ratio_time="230.95115907714333" />
+    <testcase name="multiple_random_tests" classname="test_wallace_tree" file="/home/vsysuser/workspace/CoCoTb/TEST/WTx/test_wallace_tree.py" lineno="35" time="0.010405302047729492" sim_time_ns="10.0" ratio_time="961.0485072061957" />
+  </testsuite>
+</testsuites>

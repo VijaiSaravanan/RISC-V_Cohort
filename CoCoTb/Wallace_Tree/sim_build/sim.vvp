@@ -1,0 +1,58 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5f125b9be510 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x5f125b9be6a0 .scope module, "wallace_tree" "wallace_tree" 3 2;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 256 "in_vec_flat";
+    .port_info 1 /OUTPUT 41 "out";
+P_0x5f125b9e30f0 .param/l "IN_N" 0 3 2, +C4<00000000000000000000000000001000>;
+P_0x5f125b9e3130 .param/l "W" 0 3 2, +C4<00000000000000000000000000100000>;
+v0x5f125b9cfd50_0 .var/i "i", 31 0;
+o0x76867e347048 .functor BUFZ 256, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x5f125b9d0430_0 .net "in_vec_flat", 255 0, o0x76867e347048;  0 drivers
+v0x5f125ba08290_0 .var/s "out", 40 0;
+v0x5f125ba08350_0 .var/s "tmp", 31 0;
+E_0x5f125b9f7da0 .event anyedge, v0x5f125b9d0430_0, v0x5f125ba08290_0, v0x5f125ba08350_0;
+    .scope S_0x5f125b9be6a0;
+T_0 ;
+    %wait E_0x5f125b9f7da0;
+    %pushi/vec4 0, 0, 41;
+    %store/vec4 v0x5f125ba08290_0, 0, 41;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x5f125b9cfd50_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x5f125b9cfd50_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x5f125b9d0430_0;
+    %load/vec4 v0x5f125b9cfd50_0;
+    %muli 32, 0, 32;
+    %part/s 32;
+    %store/vec4 v0x5f125ba08350_0, 0, 32;
+    %load/vec4 v0x5f125ba08290_0;
+    %load/vec4 v0x5f125ba08350_0;
+    %pad/s 41;
+    %add;
+    %store/vec4 v0x5f125ba08290_0, 0, 41;
+    %load/vec4 v0x5f125b9cfd50_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x5f125b9cfd50_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/vsysuser/workspace/CoCoTb/TEST/WTx/wallace_tree.v";

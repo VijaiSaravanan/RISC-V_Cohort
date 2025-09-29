@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1759123413" />
+    <testcase name="adder_basic_test" classname="test_adder" file="/home/vsysuser/workspace/RISC-V_Cohort/CoCoTb/Adder/test_adder.py" lineno="5" time="0.0030176639556884766" sim_time_ns="10.0" ratio_time="3313.8216006952675" />
+  </testsuite>
+</testsuites>
