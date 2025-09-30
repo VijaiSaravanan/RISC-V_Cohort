@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1759245818" />
+    <testcase name="test_basic" classname="test_cla" file="/home/vsysuser/workspace/RISC-V_Cohort/CoCoTb/CLA/test_cla.py" lineno="26" time="0.001100301742553711" sim_time_ns="4.0" ratio_time="3635.3664138678223" />
+    <testcase name="test_all_combinations" classname="test_cla" file="/home/vsysuser/workspace/RISC-V_Cohort/CoCoTb/CLA/test_cla.py" lineno="35" time="0.1753852367401123" sim_time_ns="512.0" ratio_time="2919.2879031128887" />
+    <testcase name="test_random" classname="test_cla" file="/home/vsysuser/workspace/RISC-V_Cohort/CoCoTb/CLA/test_cla.py" lineno="44" time="0.0071392059326171875" sim_time_ns="50.0" ratio_time="7003.580016029922" />
+  </testsuite>
+</testsuites>
