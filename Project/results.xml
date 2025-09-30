@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1759244171" />
+    <testcase name="test_cclass" classname="test_cclass" file="/home/vsysuser/workspace/artifacts/setup/test_cclass.py" lineno="17" time="96.23667979240417" sim_time_ns="10.338" ratio_time="0.10742265861935901" />
+  </testsuite>
+</testsuites>
