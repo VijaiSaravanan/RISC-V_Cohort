@@ -1,0 +1,4 @@
+Missing PC (Hex),Label (Context),Instruction
+0x0,No label,Not found in disassembly
+0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+0x800000b6,reset_vector,"csrw	0x744,8"

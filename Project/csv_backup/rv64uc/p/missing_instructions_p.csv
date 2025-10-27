@@ -1,0 +1,6 @@
+Instruction,Mode,Missing PC (Hex),Label (Context),Instruction
+rvc,p,0x0,No label,Not found in disassembly
+rvc,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+rvc,p,0x800000b6,reset_vector,"csrw	0x744,8"
+rvc,p,0x800022e8,pass,ecall
+rvc,p,0x80000062,shakti_end,"sw	t5,12(t6)"

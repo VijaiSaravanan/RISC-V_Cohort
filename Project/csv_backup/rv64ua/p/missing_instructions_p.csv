@@ -1,0 +1,94 @@
+Instruction,Mode,Missing PC (Hex),Label (Context),Instruction
+amoadd_d,p,0x0,No label,Not found in disassembly
+amoadd_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoadd_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoadd_d,p,0x800001b6,pass,ecall
+amoadd_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoadd_w,p,0x0,No label,Not found in disassembly
+amoadd_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoadd_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoadd_w,p,0x800001b2,pass,ecall
+amoadd_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoand_d,p,0x0,No label,Not found in disassembly
+amoand_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoand_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoand_d,p,0x800001ae,pass,ecall
+amoand_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoand_w,p,0x0,No label,Not found in disassembly
+amoand_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoand_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoand_w,p,0x800001ac,pass,ecall
+amoand_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amomax_d,p,0x0,No label,Not found in disassembly
+amomax_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomax_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amomax_d,p,0x800001a8,pass,ecall
+amomax_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amomax_w,p,0x0,No label,Not found in disassembly
+amomax_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomax_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amomax_w,p,0x800001d0,pass,ecall
+amomax_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amomaxu_d,p,0x0,No label,Not found in disassembly
+amomaxu_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomaxu_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amomaxu_d,p,0x800001a8,pass,ecall
+amomaxu_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amomaxu_w,p,0x0,No label,Not found in disassembly
+amomaxu_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomaxu_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amomaxu_w,p,0x800001d0,pass,ecall
+amomaxu_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amomin_d,p,0x0,No label,Not found in disassembly
+amomin_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomin_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amomin_d,p,0x800001a8,pass,ecall
+amomin_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amomin_w,p,0x0,No label,Not found in disassembly
+amomin_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomin_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amomin_w,p,0x800001d2,pass,ecall
+amomin_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amominu_d,p,0x0,No label,Not found in disassembly
+amominu_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amominu_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amominu_d,p,0x800001a8,pass,ecall
+amominu_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amominu_w,p,0x0,No label,Not found in disassembly
+amominu_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amominu_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amominu_w,p,0x800001d0,pass,ecall
+amominu_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoor_d,p,0x0,No label,Not found in disassembly
+amoor_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoor_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoor_d,p,0x800001a8,pass,ecall
+amoor_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoor_w,p,0x0,No label,Not found in disassembly
+amoor_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoor_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoor_w,p,0x800001a8,pass,ecall
+amoor_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoswap_d,p,0x0,No label,Not found in disassembly
+amoswap_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoswap_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoswap_d,p,0x800001ae,pass,ecall
+amoswap_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoswap_w,p,0x0,No label,Not found in disassembly
+amoswap_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoswap_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoswap_w,p,0x800001ac,pass,ecall
+amoswap_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoxor_d,p,0x0,No label,Not found in disassembly
+amoxor_d,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoxor_d,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoxor_d,p,0x800001b4,pass,ecall
+amoxor_d,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+amoxor_w,p,0x0,No label,Not found in disassembly
+amoxor_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoxor_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+amoxor_w,p,0x800001ba,pass,ecall
+amoxor_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+lrsc,p,0x0,No label,Not found in disassembly
+lrsc,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+lrsc,p,0x800000b6,reset_vector,"csrw	0x744,8"

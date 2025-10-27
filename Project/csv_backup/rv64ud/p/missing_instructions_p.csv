@@ -1,0 +1,61 @@
+Instruction,Mode,Missing PC (Hex),Label (Context),Instruction
+fadd,p,0x0,No label,Not found in disassembly
+fadd,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fadd,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fadd,p,0x800002fa,pass,ecall
+fadd,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fclass,p,0x0,No label,Not found in disassembly
+fclass,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fclass,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fclass,p,0x80000252,pass,ecall
+fclass,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fcmp,p,0x0,No label,Not found in disassembly
+fcmp,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fcmp,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fcmp,p,0x80000386,pass,ecall
+fcmp,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fcvt,p,0x0,No label,Not found in disassembly
+fcvt,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fcvt,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fcvt,p,0x800002de,pass,ecall
+fcvt,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fcvt_w,p,0x0,No label,Not found in disassembly
+fcvt_w,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fcvt_w,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fcvt_w,p,0x80000806,pass,ecall
+fcvt_w,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fdiv,p,0x0,No label,Not found in disassembly
+fdiv,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fdiv,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fdiv,p,0x800002aa,pass,ecall
+fdiv,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fmadd,p,0x0,No label,Not found in disassembly
+fmadd,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fmadd,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fmadd,p,0x8000034a,pass,ecall
+fmadd,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+fmin,p,0x0,No label,Not found in disassembly
+fmin,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fmin,p,0x800000b6,reset_vector,"csrw	0x744,8"
+fmin,p,0x8000043e,pass,ecall
+fmin,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+ldst,p,0x0,No label,Not found in disassembly
+ldst,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+ldst,p,0x800000b6,reset_vector,"csrw	0x744,8"
+ldst,p,0x800001f8,pass,ecall
+ldst,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+move,p,0x0,No label,Not found in disassembly
+move,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+move,p,0x800000b6,reset_vector,"csrw	0x744,8"
+move,p,0x80000e50,pass,ecall
+move,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+recoding,p,0x0,No label,Not found in disassembly
+recoding,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+recoding,p,0x800000b6,reset_vector,"csrw	0x744,8"
+recoding,p,0x8000022e,pass,ecall
+recoding,p,0x80000062,shakti_end,"sw	t5,12(t6)"
+structural,p,0x0,No label,Not found in disassembly
+structural,p,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+structural,p,0x800000b6,reset_vector,"csrw	0x744,8"
+structural,p,0x80000378,pass,ecall
+structural,p,0x80000062,shakti_end,"sw	t5,12(t6)"

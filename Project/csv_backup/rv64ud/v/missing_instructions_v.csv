@@ -1,0 +1,61 @@
+Instruction,Mode,Missing PC (Hex),Label (Context),Instruction
+fadd,v,0x0,No label,Not found in disassembly
+fadd,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fadd,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fadd,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fadd,v,0x2788,No label,Not found in disassembly
+fclass,v,0x0,No label,Not found in disassembly
+fclass,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fclass,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fclass,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fclass,v,0x2788,No label,Not found in disassembly
+fcmp,v,0x0,No label,Not found in disassembly
+fcmp,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fcmp,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fcmp,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fcmp,v,0x2788,No label,Not found in disassembly
+fcvt,v,0x0,No label,Not found in disassembly
+fcvt,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fcvt,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fcvt,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fcvt,v,0x2788,No label,Not found in disassembly
+fcvt_w,v,0x0,No label,Not found in disassembly
+fcvt_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fcvt_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fcvt_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fcvt_w,v,0x2788,No label,Not found in disassembly
+fdiv,v,0x0,No label,Not found in disassembly
+fdiv,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fdiv,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fdiv,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fdiv,v,0x2788,No label,Not found in disassembly
+fmadd,v,0x0,No label,Not found in disassembly
+fmadd,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fmadd,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fmadd,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fmadd,v,0x2788,No label,Not found in disassembly
+fmin,v,0x0,No label,Not found in disassembly
+fmin,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+fmin,v,0x8000008c,handle_reset,"csrw	0x744,8"
+fmin,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+fmin,v,0x2788,No label,Not found in disassembly
+ldst,v,0x0,No label,Not found in disassembly
+ldst,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+ldst,v,0x8000008c,handle_reset,"csrw	0x744,8"
+ldst,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+ldst,v,0x2788,No label,Not found in disassembly
+move,v,0x0,No label,Not found in disassembly
+move,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+move,v,0x8000008c,handle_reset,"csrw	0x744,8"
+move,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+move,v,0x2788,No label,Not found in disassembly
+recoding,v,0x0,No label,Not found in disassembly
+recoding,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+recoding,v,0x8000008c,handle_reset,"csrw	0x744,8"
+recoding,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+recoding,v,0x2788,No label,Not found in disassembly
+structural,v,0x0,No label,Not found in disassembly
+structural,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+structural,v,0x8000008c,handle_reset,"csrw	0x744,8"
+structural,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+structural,v,0x278a,No label,Not found in disassembly

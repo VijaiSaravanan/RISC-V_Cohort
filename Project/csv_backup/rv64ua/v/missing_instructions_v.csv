@@ -1,0 +1,96 @@
+Instruction,Mode,Missing PC (Hex),Label (Context),Instruction
+amoadd_d,v,0x0,No label,Not found in disassembly
+amoadd_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoadd_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoadd_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoadd_d,v,0x2788,No label,Not found in disassembly
+amoadd_w,v,0x0,No label,Not found in disassembly
+amoadd_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoadd_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoadd_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoadd_w,v,0x2788,No label,Not found in disassembly
+amoand_d,v,0x0,No label,Not found in disassembly
+amoand_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoand_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoand_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoand_d,v,0x2788,No label,Not found in disassembly
+amoand_w,v,0x0,No label,Not found in disassembly
+amoand_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoand_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoand_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoand_w,v,0x2788,No label,Not found in disassembly
+amomax_d,v,0x0,No label,Not found in disassembly
+amomax_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomax_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amomax_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amomax_d,v,0x2788,No label,Not found in disassembly
+amomax_w,v,0x0,No label,Not found in disassembly
+amomax_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomax_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amomax_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amomax_w,v,0x2788,No label,Not found in disassembly
+amomaxu_d,v,0x0,No label,Not found in disassembly
+amomaxu_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomaxu_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amomaxu_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amomaxu_d,v,0x2788,No label,Not found in disassembly
+amomaxu_w,v,0x0,No label,Not found in disassembly
+amomaxu_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomaxu_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amomaxu_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amomaxu_w,v,0x2788,No label,Not found in disassembly
+amomin_d,v,0x0,No label,Not found in disassembly
+amomin_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomin_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amomin_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amomin_d,v,0x2788,No label,Not found in disassembly
+amomin_w,v,0x0,No label,Not found in disassembly
+amomin_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amomin_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amomin_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amomin_w,v,0x2788,No label,Not found in disassembly
+amominu_d,v,0x0,No label,Not found in disassembly
+amominu_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amominu_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amominu_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amominu_d,v,0x2788,No label,Not found in disassembly
+amominu_w,v,0x0,No label,Not found in disassembly
+amominu_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amominu_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amominu_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amominu_w,v,0x2788,No label,Not found in disassembly
+amoor_d,v,0x0,No label,Not found in disassembly
+amoor_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoor_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoor_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoor_d,v,0x2788,No label,Not found in disassembly
+amoor_w,v,0x0,No label,Not found in disassembly
+amoor_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoor_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoor_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoor_w,v,0x2788,No label,Not found in disassembly
+amoswap_d,v,0x0,No label,Not found in disassembly
+amoswap_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoswap_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoswap_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoswap_d,v,0x2788,No label,Not found in disassembly
+amoswap_w,v,0x0,No label,Not found in disassembly
+amoswap_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoswap_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoswap_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoswap_w,v,0x2788,No label,Not found in disassembly
+amoxor_d,v,0x0,No label,Not found in disassembly
+amoxor_d,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoxor_d,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoxor_d,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoxor_d,v,0x2788,No label,Not found in disassembly
+amoxor_w,v,0x0,No label,Not found in disassembly
+amoxor_w,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+amoxor_w,v,0x8000008c,handle_reset,"csrw	0x744,8"
+amoxor_w,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+amoxor_w,v,0x2788,No label,Not found in disassembly
+lrsc,v,0x0,No label,Not found in disassembly
+lrsc,v,0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+lrsc,v,0x8000008c,handle_reset,"csrw	0x744,8"
+lrsc,v,0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+lrsc,v,0x2788,No label,Not found in disassembly

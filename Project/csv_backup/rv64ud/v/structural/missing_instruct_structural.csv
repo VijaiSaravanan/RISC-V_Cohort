@@ -1,0 +1,6 @@
+Missing PC (Hex),Label (Context),Instruction
+0x0,No label,Not found in disassembly
+0xaaaaaaaaaaaaaaaa,No label,Not found in disassembly
+0x8000008c,handle_reset,"csrw	0x744,8"
+0x80000138,trap_entry,"csrrw	sp,sscratch,sp"
+0x278a,No label,Not found in disassembly
