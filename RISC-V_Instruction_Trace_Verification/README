@@ -1,4 +1,4 @@
-#RISC-V Trace Verification: Block Level CoCoTb based Verification in Shakthi C-Class Processor
+# RISC-V Trace Verification: Block Level CoCoTb based Verification in Shakthi C-Class Processor
 This project performs Instruction Trace Verification on the Shakthi C-Class RISC-V Processor using a Cocotb-based block-level verification environment. The goal is to ensure functional correctness by comparing RTL execution traces against disassembled reference traces of the test program.
 
 ## Project Overview
