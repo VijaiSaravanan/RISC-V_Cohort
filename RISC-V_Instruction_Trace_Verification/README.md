@@ -23,5 +23,5 @@ python analyze_pc.py
 6. Output Results will be available in a csv file.
 
 ### 📜 Documentation
-  📄 Project Report.pdf – Complete workflow, methodology & outcomes
-  📊 Presentation.ppt – VIVA / Final presentation slides
+📄 Project Report.pdf – Complete workflow, methodology & outcomes
+📊 Presentation.ppt – VIVA / Final presentation slides
