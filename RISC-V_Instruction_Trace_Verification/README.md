@@ -9,12 +9,18 @@ This project performs Instruction Trace Verification on the Shakthi C-Class RISC
 
 ## How to Run the Verification
 1. Clone the repository
-   `git clone https://github.com/VijaiSaravanan/RISC-V_Cohort/RISC-V_Instruction_Trace_Verification/Scripts.git`
+```
+   git clone https://github.com/VijaiSaravanan/RISC-V_Cohort/RISC-V_Instruction_Trace_Verification/Scripts.git
+```
 3. Run the COCOTB test
-  `MODULE=test_c_class TESTCASE= TOPLEVEL=mkTbSoc TOPLEVEL_LANG=verilog "<Simulator>" +rtldump`
+```
+   MODULE=test_c_class TESTCASE= TOPLEVEL=mkTbSoc TOPLEVEL_LANG=verilog "<Simulator>" +rtldump
+```
 4. Run PC verification script
-  `python analyze_pc.py`
-5. Output Results will be available in a csv file.
+```
+python analyze_pc.py
+```
+6. Output Results will be available in a csv file.
 
 ### 📜 Documentation
   📄 Project Report.pdf – Complete workflow, methodology & outcomes
