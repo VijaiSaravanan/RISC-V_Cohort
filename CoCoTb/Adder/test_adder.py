@@ -15,3 +15,4 @@ async def adder_basic_test(dut):
 
         expected = a_val + b_val
         assert dut.sum.value == expected, f"Mismatch: {dut.sum.value} != {expected}"
+
