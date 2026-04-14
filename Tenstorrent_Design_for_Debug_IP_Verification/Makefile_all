@@ -1,0 +1,163 @@
+# SPDX-FileCopyrightText: Copyright 2025 Tenstorrent AI ULC
+# SPDX-License-Identifier: Apache-2.0
+#
+# tt-dfd Complete 12-Layer Verification Makefile
+# ===============================================
+#
+# LAYER TARGETS:
+#   make 1   — Register connectivity, address decode, reset values
+#   make 2   — Individual feature correctness (events, actions, VLT, NTrace)
+#   make 3   — Programming sequence compliance
+#   make 4   — End-to-end data integrity (VLT decoder, NTrace decoder)
+#   make 5   — Coverage closure (functional coverpoints + stimulus)
+#   make 6   — Debug signal mux routing (hw8..hw15 functional verification)
+#   make 7   — TimeSync and timestamp correlation
+#   make 8   — Cold vs warm reset differentiation
+#   make 9   — StopOnWrap complete SRAM circular buffer readout
+#   make 10  — APB bus stress and concurrent access
+#   make 11  — Parameter variant testing (CLA-only, trace-only, multi-inst)
+#   make 12  — Clock-halt interaction and cross-trigger daisy-chain
+#
+# COMBINED TARGETS:
+#   make all_layers          — All 12 layers in order
+#   make regression_phase1   — Layers 1–5  (pre-silicon design review)
+#   make regression_phase2   — Layers 6–12 (tapeout sign-off)
+#   make coverage            — All layers + Verilator coverage report
+#
+# VARIANT TARGETS (require separate builds):
+#   make variant_cla_only    — Build+run layers 1-5 with CLA_SUPPORT=1 only
+#   make variant_trace_only  — Build+run layers 1-5 with DST+NTRACE, no CLA
+#   make variant_multi_inst  — Build+run layers 1-5,11 with INST=2
+
+TOPLEVEL_LANG = verilog
+SIM           = verilator
+TOPLEVEL      = dfd_top
+
+export PYTHONPATH := $(PWD)/files3:$(PYTHONPATH)
+EXTRA_ARGS += -f tt_dfd.f
+
+VERILATOR_ARGS := --no-timing --public-flat-rw -O3 \
+                  --x-assign fast --x-initial fast \
+                  --noassert --bbox-sys --autoflush \
+                  --threads 1 --trace \
+                  --output-split 20000 --output-split-ctrace 10000
+
+SUPPRESS_WARNS := -Wno-STMTDLY -Wno-UNOPTFLAT -Wno-WIDTH -Wno-lint \
+                  -Wno-COMBDLY -Wno-INITIALDLY -Wno-WIDTHCONCAT -Wno-SPLITVAR
+
+EXTRA_ARGS += $(VERILATOR_ARGS) $(SUPPRESS_WARNS)
+
+# Default build parameters
+EXTRA_ARGS += -GNTRACE_SUPPORT=1 \
+              -GDST_SUPPORT=1    \
+              -GCLA_SUPPORT=1    \
+              -GINTERNAL_MMRS=1  \
+              -GNUM_TRACE_AND_ANALYZER_INST=1
+
+WAVES = 1
+
+COVERAGE_ARGS = --coverage
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Individual layer targets
+# ─────────────────────────────────────────────────────────────────────────────
+.PHONY: 1 2 3 4 5 6 7 8 9 \
+        10 11 12
+
+1:
+	$(MAKE) COCOTB_TEST_MODULES=test1_registers
+
+2:
+	$(MAKE) COCOTB_TEST_MODULES=test2_features
+
+3:
+	$(MAKE) COCOTB_TEST_MODULES=test3_sequences
+
+4:
+	$(MAKE) COCOTB_TEST_MODULES=test4_data_integrity
+
+5:
+	$(MAKE) COCOTB_TEST_MODULES=test5_coverage
+
+6:
+	$(MAKE) COCOTB_TEST_MODULES=test6_debug_mux
+
+7:
+	$(MAKE) COCOTB_TEST_MODULES=test7_timesync
+
+8:
+	$(MAKE) COCOTB_TEST_MODULES=test8_reset_differentiation
+
+9:
+	$(MAKE) COCOTB_TEST_MODULES=test9_stop_on_wrap_readout
+
+10:
+	$(MAKE) COCOTB_TEST_MODULES=test10_apb_bus_stress
+
+11:
+	$(MAKE) COCOTB_TEST_MODULES=test11_parameter_variants
+
+12:
+	$(MAKE) COCOTB_TEST_MODULES=test12_clock_halt_and_crosstrig
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Combined regression targets
+# ─────────────────────────────────────────────────────────────────────────────
+.PHONY: regression_phase1 regression_phase2 all_layers coverage clean_results
+
+regression_phase1: 1 2 3 4 5
+	@echo ""
+	@echo "========================================================"
+	@echo "  Phase 1 Complete (Layers 1-5: Design Review)"
+	@echo "========================================================"
+
+regression_phase2: 6 7 8 9 10 11 12
+	@echo ""
+	@echo "========================================================"
+	@echo "  Phase 2 Complete (Layers 6-12: Tapeout Sign-Off)"
+	@echo "========================================================"
+
+all_layers: regression_phase1 regression_phase2
+	@echo ""
+	@echo "========================================================"
+	@echo "  tt-dfd All 12 Verification Layers Complete"
+	@echo "========================================================"
+
+coverage:
+	$(MAKE) EXTRA_ARGS="$(EXTRA_ARGS) $(COVERAGE_ARGS)" all_layers
+	@if command -v verilator_coverage >/dev/null 2>&1; then \
+		verilator_coverage --annotate coverage_annotated \
+		    --annotate-min 1 logs/coverage.dat 2>/dev/null && \
+		echo "Coverage report → coverage_annotated/"; \
+	else \
+		echo "verilator_coverage not found — skip HTML report"; \
+	fi
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Parameter variant builds
+# ─────────────────────────────────────────────────────────────────────────────
+.PHONY: variant_cla_only variant_trace_only variant_multi_inst
+
+variant_cla_only:
+	$(MAKE) EXTRA_ARGS="$(VERILATOR_ARGS) $(SUPPRESS_WARNS) \
+	        -GCLA_SUPPORT=1 -GDST_SUPPORT=0 -GNTRACE_SUPPORT=0 \
+	        -GINTERNAL_MMRS=1 -GNUM_TRACE_AND_ANALYZER_INST=1 -f tt_dfd.f" \
+	        COCOTB_TEST_MODULES=test11_parameter_variants
+
+variant_trace_only:
+	$(MAKE) EXTRA_ARGS="$(VERILATOR_ARGS) $(SUPPRESS_WARNS) \
+	        -GCLA_SUPPORT=0 -GDST_SUPPORT=1 -GNTRACE_SUPPORT=1 \
+	        -GINTERNAL_MMRS=1 -GNUM_TRACE_AND_ANALYZER_INST=1 -f tt_dfd.f" \
+	        COCOTB_TEST_MODULES=test11_parameter_variants
+
+variant_multi_inst:
+	$(MAKE) EXTRA_ARGS="$(VERILATOR_ARGS) $(SUPPRESS_WARNS) \
+	        -GCLA_SUPPORT=1 -GDST_SUPPORT=1 -GNTRACE_SUPPORT=1 \
+	        -GINTERNAL_MMRS=1 -GNUM_TRACE_AND_ANALYZER_INST=2 -f tt_dfd.f" \
+	        COCOTB_TEST_MODULES=test11_parameter_variants
+
+clean_results:
+	rm -rf results.xml sim_build __pycache__ *.vcd *.fst \
+	       coverage_annotated logs
