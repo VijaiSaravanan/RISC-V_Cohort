@@ -4,6 +4,7 @@
 # tt-dfd Complete 12-Layer Verification Makefile
 # ===============================================
 #
+
 # LAYER TARGETS:
 #   make 1   — Register connectivity, address decode, reset values
 #   make 2   — Individual feature correctness (events, actions, VLT, NTrace)
